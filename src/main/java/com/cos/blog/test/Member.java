@@ -1,5 +1,14 @@
 package com.cos.blog.test;
 
+import lombok.*;
+
+//@Getter
+//@Setter
+//Data = Getter + Setter
+@Data
+//@AllArgsConstructor
+@NoArgsConstructor
+// @RequiredArgsConstructor        //final 사용시 적용
 public class Member {
 
     private int id;
@@ -7,42 +16,13 @@ public class Member {
     private String password;
     private String email;
 
+    @Builder        //객체 생성시, 연속되는 시퀀스를 적용하기 위해
     public Member(int id, String username, String password, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
+
+
